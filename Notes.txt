@@ -1,3 +1,28 @@
 At this point, the idea of a chain should be apparent—each new block contains within itself, 
 the hash of the previous Block. This is crucial because it’s what gives blockchains immutability: 
 If an attacker corrupted an earlier Block in the chain then all subsequent blocks will contain incorrect hashes.
+
+########################################Static Method
+
+static method is the method where do not use sef to  the method variable
+
+
+
+
+############################## HASHING WITH SHA-256
+
+from hashlib import sha256
+x = 5
+y = 0  # We don't know what y should be yet...
+while sha256(f'{x*y}'.encode()).hexdigest()[-1] != "0":
+    y += 1
+print(f'The solution is y = {y}')
+
+hash(5 * 21) = 1253e9373e...5e3600155e860
+
+
+###########################
+
+A proof of work is the how new blocks are created or mined on the blockchain. The goal of the pow is to discover 
+a number which solve a problem. the number must be difficult but easy to verify -computationally 
+speaking- by anyone on the network. 
